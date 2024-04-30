@@ -8,7 +8,7 @@ app.set("views", __dirname + "/views");
 
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) {
+app.get("/", (req, res) => {
     res.render("in_persona_01");
 });
 
