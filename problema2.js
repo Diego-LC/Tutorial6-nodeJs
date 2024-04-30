@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
 app.post("/procesar", (req, res) => {
     const { nombre, apellido, direccion, fechaNacimiento} = req.body;
 
-    // Calcula la edad a partir de la fecha de nacimiento const fechaNacimientoDate new Date(fechaNacimiento);
+    // Calcula la edad a partir de la fecha de nacimiento 
+    const fechaNacimientoDate = new Date(fechaNacimiento);
     const ahora = new Date();
     const edad = ahora.getFullYear() - fechaNacimientoDate.getFullYear();
 
