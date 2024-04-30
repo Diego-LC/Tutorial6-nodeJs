@@ -20,7 +20,7 @@ app.post("/procesar", (req, res) => {
     const ahora = new Date();
     const edad = ahora.getFullYear() - fechaNacimientoDate.getFullYear();
     // contar cuantos carácteres numericos tiene el comentario
-    const cantidadNumerosComentario = comentario.replace(/\D/g, "").length;
+    const cantNumerosComentario = comentario.replace(/\D/g, "").length;
 
     // Renderiza la vista de resultado
     res.render("out_persona_02", {
@@ -28,7 +28,7 @@ app.post("/procesar", (req, res) => {
     apellido,
     direccion,
     edad,
-    cantidadNumerosComentario
+    cantNumerosComentario
     });
 });
 
